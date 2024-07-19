@@ -6,9 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "gen": "ts-node ./document_loaders/document_loaders.ts"
   },
   "dependencies": {
+    "@pinecone-database/pinecone": "^2.2.2",
+    "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-dropdown-menu": "^2.1.1",
+    "@radix-ui/react-slot": "^1.1.0",
     "ai": "^3.2.31",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
