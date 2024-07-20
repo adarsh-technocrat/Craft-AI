@@ -6,7 +6,7 @@ const ExploreSearchHeader = () => (
       Generate interface designs at lightning speed
     </h1>
     <text className="text-[#b0b0b0] font-normal text-nowrap text-base">
-      Uxmagic AI is a UI generation platform for easy and fast design ideation
+      Craft AI is a UI generation platform for easy and fast design ideation
     </text>
   </div>
 );

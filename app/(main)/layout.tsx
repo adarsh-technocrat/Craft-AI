@@ -25,9 +25,13 @@ export default function MainLayout({
       <body>
         <div className="grid h-screen w-full pl-[56px]">
           <aside className="inset-y fixed  left-0 z-20 flex h-full flex-col border-x border-[#404040] px-2 py-2 gap-4 ">
-            <NavButton Icon={Telescope} link="#" title="Explore" />
-            <NavButton Icon={ClipboardPenLine} link="#" title="text-to-UI" />
-            <NavButton Icon={Image} link="#" title="Image-to-UI" />
+            <NavButton Icon={Telescope} link="/explore" title="Explore" />
+            <NavButton
+              Icon={ClipboardPenLine}
+              link="/create"
+              title="text-to-UI"
+            />
+            <NavButton Icon={Image} link="/image-to-ui" title="Image-to-UI" />
             <nav className="mt-auto grid gap-1 p-2">
               <div className="flex flex-col justify-center items-center gap-4">
                 <Avatar className="bg-white" />
