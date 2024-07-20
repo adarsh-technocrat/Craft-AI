@@ -1,4 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.usegalileo.ai",
+        pathname: "/feed-images/**",
+      },
+    ],
+  },
+};
 
 export default nextConfig;

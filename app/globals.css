@@ -67,3 +67,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+*{
+  background: #1e1e1e;
+}
