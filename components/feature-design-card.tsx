@@ -15,8 +15,8 @@ interface Author {
 
 interface FeatureDesignCardProps {
   imageUrl: string;
-  description: string;
-  author: Author;
+  description?: string;
+  author?: Author;
 }
 
 const FeatureDesignCard = ({
@@ -28,13 +28,18 @@ const FeatureDesignCard = ({
     <CardContent className="bg-[#dde3ee] rounded-tr-xl rounded-tl-xl w-full p-4 flex flex-col justify-center items-center">
       <img src={imageUrl} alt="" />
     </CardContent>
-    <CardDescription className="text-[#fafafa] bg-[#262626] p-4 text-ellipsis">
-      {description}
-    </CardDescription>
-    <CardFooter className="bg-[#262626] rounded-br-xl rounded-bl-xl flex flex-row items-center justify-start gap-3">
-      <Avatar></Avatar>
-      <p className="text-[#b0b0b0] text-sm">{author.authorName}</p>
-    </CardFooter>
+    {description && (
+      <CardDescription className="text-[#fafafa] bg-[#262626] p-4 text-ellipsis">
+        {description}
+      </CardDescription>
+    )}
+
+    {author && (
+      <CardFooter className="bg-[#262626] rounded-br-xl rounded-bl-xl flex flex-row items-center justify-start gap-3">
+        <Avatar></Avatar>
+        <p className="text-[#b0b0b0] text-sm">{author.authorName}</p>
+      </CardFooter>
+    )}
   </Card>
 );
 
