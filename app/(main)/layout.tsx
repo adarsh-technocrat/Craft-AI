@@ -40,7 +40,7 @@ export default function MainLayout({
               </nav>
             </aside>
             {pathName === "/create" && <CreateSideNavbar />}
-            {pathName === "/image-to-ui" && <ImageToUISideNavbar />}
+            {/* {pathName === "/image-to-ui" && <ImageToUISideNavbar />} */}
           </>
 
           <div className="flex flex-col">
