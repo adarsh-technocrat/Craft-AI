@@ -24,7 +24,7 @@ function InitialConversation() {
   return (
     <div className="max-w-[640px] w-full flex flex-col items-center justify-center gap-8 rounded-xl pr-11">
       <h4 className="text-xl text-white">New Design</h4>
-      <Card className="w-full bg-[#1e1e1e] px-4 border-whitec border-opacity-10">
+      <Card className="w-full bg-[#1e1e1e] px-4 border-white border-opacity-10">
         <Textarea
           className="outline-none text-white py-4 max-h-[192px] bg-transparent border-none resize-none"
           placeholder="Enter your text here..."
