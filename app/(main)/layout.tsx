@@ -19,9 +19,9 @@ export default function MainLayout({
   return (
     <html lang="en">
       <body>
-        <div className="grid h-screen w-full pl-[56px]">
+        <div className="grid h-screen w-full">
           <>
-            <aside className="inset-y fixed  left-0 z-20 flex h-full flex-col border-x border-[#404040] px-2 py-2 gap-4 ">
+            <aside className=" bg-[#1e1e1e] inset-y fixed  left-0 z-20 flex h-full flex-col border-x border-[#404040] px-2 py-2 gap-4 ">
               <NavButton Icon={Telescope} link="/explore" title="Explore" />
               <NavButton
                 Icon={ClipboardPenLine}
@@ -40,7 +40,7 @@ export default function MainLayout({
               </nav>
             </aside>
             {pathName === "/create" && <CreateSideNavbar />}
-            {/* {pathName === "/image-to-ui" && <ImageToUISideNavbar />} */}
+            {pathName === "/image-to-ui" && <ImageToUISideNavbar />}
           </>
 
           <div className="flex flex-col">
@@ -60,7 +60,7 @@ export default function MainLayout({
                 </Button>
               </header>
             )}
-            <main className="overflow-auto px-[80px] md:grid-cols-2 lg:grid-cols-3">
+            <main className="overflow-hidden md:grid-cols-2 lg:grid-cols-3">
               {children}
             </main>
           </div>
