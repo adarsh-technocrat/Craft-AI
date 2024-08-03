@@ -4,7 +4,6 @@
 
 @layer base {
   :root {
-    --background-card-color: #00000;
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
@@ -70,11 +69,21 @@
   }
 }
 
-.preview-card {
-  background-color: var(--background-card-color);
-}
-
 ::-webkit-scrollbar {
   width: 0; /* Remove scrollbar space */
   background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+.prose {
+  max-width: 100ch;
+  font-size: 16px;
+}
+
+.prose li {
+  list-style-type: disc;
+  margin-left: 0rem;
+}
+
+.prose p + p {
+  margin-top: 0rem;
 }

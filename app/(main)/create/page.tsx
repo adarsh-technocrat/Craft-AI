@@ -80,7 +80,8 @@ const content = {
       completed_at: "2024-07-21T06:13:44.849771",
     },
   ],
-  markdownExplanation: "",
+  description:
+    "The design generation for the 5 pages of your trading web app is complete. Here are the screens designed:\n\n1. **Dashboard Homepage:** Features a snapshot of current market trends, a brief overview of the user's portfolio, and quick access to various trading assets.\n\n2. **Market Analysis Page:** Provides comprehensive technical analysis tools, including advanced charting, indicators, and insights into market conditions.\n\n3. **Trade Execution Page:** A functional interface for placing trades, equipped with a live order book, current bid/ask spreads, and order management.\n\n4. **Portfolio Management Page:** Offers a dashboard for users to manage their investment portfolio, with analytics on performance and an overview of asset distribution.\n\n5. **Settings & Profile Page:** A customizable settings area where users can set notifications, alter preferences, and ensure account security.\n\nYou now have a foundational set of pages for a robust and user-friendly trading platform.",
 };
 
 function page() {

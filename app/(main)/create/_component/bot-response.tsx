@@ -1,9 +1,8 @@
-import FeatureDesignCard from "@/components/feature-design-card";
+import React from "react";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import React from "react";
 import Markdown from "react-markdown";
 
 interface Theme {
@@ -42,48 +41,55 @@ interface GeneratedUI {
 
 interface BotContent {
   listOfGeneratedUI: GeneratedUI[];
-  markdownExplanation: string;
+  description: string;
 }
 
 interface BotResponseUIProps {
   content: BotContent;
 }
+
 function BotResponseUI({ content }: BotResponseUIProps) {
   return (
     <React.Fragment>
-      <Card className="my-4 p-2 bg-transparent border-none flex flex-row justify-start items-start gap-3">
+      <Card className="my-4 p-2 bg-transparent border-none flex flex-row justify-start items-start gap-3 w-full">
         <Avatar>
-          <AvatarImage src="/logo.png" alt="" />
+          <AvatarImage src="/logo.png" alt="Logo" />
         </Avatar>
-        <div className="flex flex-col gap-1 text-white prose-h1:text-[16px] prose-p:text-[14px] prose-h1:font-semibold">
+        <div className="flex flex-col gap-1 text-white prose-h1:text-[16px] prose-p:text-[14px] prose-h1:font-semibold w-full">
           <h1>Uxmagic Bot</h1>
           <p>Here's the design you asked for:</p>
         </div>
       </Card>
-      <div className={cn(`grid grid-cols-2 gap-2`)}>
-        {content.listOfGeneratedUI.map((component) => {
-          return <BotResponseUI.UiCards {...component} />;
-        })}
+      <div className="grid grid-cols-2 gap-2 w-full">
+        {content.listOfGeneratedUI.map((component) => (
+          <BotResponseUI.UiCards key={component.designId} {...component} />
+        ))}
       </div>
-      <Markdown>{content.markdownExplanation}</Markdown>
+      <div className="py-4 w-full">
+        <Markdown className="text-white prose prose-invert w-full">
+          {content.description}
+        </Markdown>
+      </div>
     </React.Fragment>
   );
 }
 
 BotResponseUI.UiCards = (component: GeneratedUI) => {
   const commonStyle =
-    "bg-[#707577] text-[14px] text-white hover:bg-[#707577] hover:text-white ";
+    "bg-[#707577] text-[14px] text-white hover:bg-[#707577] hover:text-white";
 
   return (
     <Card
       style={{
         background: component.backgroundColor,
       }}
-      className={cn(
-        `rounded-xl max-w-full min-w-[256px] h-full min-h-[350px] p-4 flex flex-col justify-between`
-      )}
+      className="rounded-xl w-full h-full min-h-[350px] p-4 flex flex-col justify-between"
     >
-      <img src={component.screenshot_url} />
+      <img
+        src={component.screenshot_url}
+        alt="Screenshot"
+        className="w-full h-auto"
+      />
       <div className="flex flex-row justify-end items-center py-3 gap-2">
         <Button size={"sm"} className={cn(commonStyle)}>
           Edit
