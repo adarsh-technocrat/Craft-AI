@@ -19,8 +19,8 @@ function ListTileView({ title, listOfDesigns }: ListTileViewProps) {
     <div>
       <h4 className="text-[#b0b0b0] font-medium text-sm ">{title}</h4>
       <div className="py-2 flex flex-col gap-2">
-        {listOfDesigns.map((designInfo) => (
-          <ListTileView.Card {...designInfo} />
+        {listOfDesigns.map((designInfo, index) => (
+          <ListTileView.Card key={index} {...designInfo} />
         ))}
       </div>
     </div>
